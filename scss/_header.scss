@@ -1,0 +1,75 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  gap: 5%;
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 35px;
+    }
+
+    h1 {
+      font-family: "Exo 2", sans-serif;
+      font-weight: 500;
+      font-size: 1.2em;
+      color: #101820;
+    }
+  }
+
+  nav {
+    flex: 1;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          color: #222831;
+          font-weight: 300;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .header-phone {
+      * {
+        margin: 0;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 0.9em;
+      }
+
+      p {
+        color: rgba(57, 62, 70, 0.6);
+        font-weight: 300;
+        font-size: 0.8em;
+      }
+    }
+
+    .header-social {
+      a {
+        margin-right: 5px;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

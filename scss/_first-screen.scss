@@ -1,0 +1,74 @@
+@use 'variables' as v;
+
+.first-screen {
+  background-color: v.$bg;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  gap: 100px;
+
+  div {
+    text-align: center;
+
+    h1 {
+      font-weight: 500;
+      font-size: 1.4em;
+      color: v.$text;
+      width: 280px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 1.4em;
+      color: rgba(57, 62, 70, 0.7);
+      width: 450px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    button {
+      width: 400px;
+      padding: 15px 0px;
+      background-color: v.$yellow;
+      border: 0;
+      border-radius: 3px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #fff;
+    padding: 0 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    h3 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.3em;
+      border-bottom: 1px solid v.$yellow;
+      padding: 30px 0;
+    }
+
+    input {
+      border: 0;
+      background: #f5f5f5;
+      border-radius: 3px;
+      margin-bottom: 13px;
+      padding: 15px;
+      font-size: 0.9em;
+
+      &::placeholder {
+        color: #929598;
+      }
+    }
+
+    .form-btn {
+      background-color: v.$yellow;
+      font-size: 1em;
+    }
+  }
+}

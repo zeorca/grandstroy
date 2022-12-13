@@ -4,38 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./stylesheets/normalize.css" />
-    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500&family=Exo+2:wght@500&display=swap"
       rel="stylesheet"
     />
     <title>Грандстрой</title>
   </head>
   <body>
     <div class="container">
-      <header></header>
+      <header>
+        <span class="header-logo">
+          <img src="./img/header-logo.svg" alt="logo" />
+          <h1>Гарант Строй групп</h1>
+        </span>
+        <nav>
+          <ul>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Виды услуг</a></li>
+            <li><a href="">Работы</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-contacts">
+          <div class="header-phone">
+            <h3>+7 902 541-57-06</h3>
+            <p>Свяжитесь с нами</p>
+          </div>
+          <div class="header-social">
+            <a href=""><img src="./img/vk.svg" alt="vk" /></a
+            ><a href=""><img src="./img/tg.svg" alt="tg" /></a
+            ><a href=""><img src="./img/wa.svg" alt="wa" /></a>
+          </div>
+        </div>
+      </header>
       <section class="first-screen">
         <div>
-          <h1>Строительная компания Гарант Строй Групп <br/><br/>  Ремонт и отделка в Иркутске и Иркутской области.</h1>
+          <h1>
+            Строительная компания Гарант Строй Групп <br /><br />
+            Ремонт и отделка в Иркутске и Иркутской области.
+          </h1>
           <h2>
             Выполняем все виды ремонтно-отделочных и инжеренрных работ в
             квартирах, загородных домах, офисах и других помещениях
           </h2>
           <button class="fast-btn">Быстрый замер</button>
         </div>
-        <form action="post">
+        <form action="/telegram.php">
           <h3>Предварительный расчёт стоимости</h3>
-          <input id="POST-name" type="text" name="Имя*" placeholder="Имя"/>
-          <input id="POST-phone" type="text" name="Телефон*" placeholder="Телефон"/>
-          <input id="POST-square" type="text" name="Площадь объекта, кв.м." placeholder="Площадь объекта, кв.м."/>
-          <input id="POST-object" type="text" name="Тип объекта" placeholder="Тип объекта"/>
-          <input type="submit" value="Узнать стоимость"/>
+          <input id="POST-name" type="text" name="Имя" placeholder="Имя*" />
+          <input
+            id="POST-phone"
+            type="text"
+            name="Телефон"
+            placeholder="Телефон*"
+          />
+          <input
+            id="POST-square"
+            type="text"
+            name="Площадь объекта, кв.м."
+            placeholder="Площадь объекта, кв.м."
+          />
+          <input
+            id="POST-object"
+            type="text"
+            name="Тип объекта"
+            placeholder="Тип объекта"
+          />
+          <input class="form-btn" type="submit" value="Узнать стоимость" />
         </form>
       </section>
-      <section class="services"></section>
+      <section class="services">
+        <h2>Виды услуг</h2>
+        <div class="services-content">
+          <div class="services-items"><div><h4>Строительство</h4></div></div>
+          <div class="services-items"><div><h4>Сборка металлоконструкций</h4></div></div>
+          <div class="services-items"><div><h4>Электромонтажные работы</h4></div></div>
+          <div class="services-items"><div><h4>Отделочные работы</h4></div></div>
+        </div>
+      </section>
       <section class="works"></section>
       <section class="application"></section>
       <section class="partners"></section>
