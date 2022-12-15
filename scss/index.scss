@@ -1,7 +1,9 @@
-@use 'container';
-@use 'header';
-@use 'first-screen';
-@use 'services';
+@use "container";
+@use "header";
+@use "first-screen";
+@use "services";
+@use "request";
+@use "footer";
 
 * {
   font-family: "Fira Sans Condensed", sans-serif;
@@ -9,7 +11,19 @@
   list-style-type: none;
 }
 
+#success {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 
-
-
-
+  p {
+    background-color: rgb(173, 245, 179, 0.8);
+    padding: 50px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+@use "variables" as v;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: v.$text;
+  color: #fff;
+  padding: 20px 35px;
+
+
+  p {
+    font-weight: 275;
+    font-size: 0.7em;
+    margin: 0;
+  }
+
+  nav {
+    a {
+      color: #fff;
+      margin-right: 30px;
+      font-size: 0.8em;
+    }
+  }
+}

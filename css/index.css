@@ -120,6 +120,7 @@ header .header-contacts .header-social a img {
   border-radius: 3px;
 }
 .first-screen form {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -194,10 +195,89 @@ h2 {
   justify-content: right;
 }
 
+.request {
+  display: flex;
+  align-items: center;
+  background-color: #fcda05;
+  width: 85%;
+  margin: 75px auto;
+}
+.request img {
+  width: 50%;
+}
+.request form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  max-width: 70%;
+}
+.request form h2 {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0;
+}
+.request form p {
+  font-size: 0.75em;
+}
+.request form input,
+.request form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 0.9em;
+}
+.request form input::placeholder,
+.request form textarea::placeholder {
+  color: #929598;
+}
+.request form .request-btn {
+  background-color: #222831;
+  color: #fcda05;
+  width: 45%;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222831;
+  color: #fff;
+  padding: 20px 35px;
+}
+.footer p {
+  font-weight: 275;
+  font-size: 0.7em;
+  margin: 0;
+}
+.footer nav a {
+  color: #fff;
+  margin-right: 30px;
+  font-size: 0.8em;
+}
+
 * {
   font-family: "Fira Sans Condensed", sans-serif;
   text-decoration: none;
   list-style-type: none;
+}
+
+#success {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+#success p {
+  background-color: rgba(173, 245, 179, 0.8);
+  padding: 50px;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

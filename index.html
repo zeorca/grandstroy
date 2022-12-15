@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500&family=Exo+2:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@275;300;400;500&family=Exo+2:wght@500&display=swap"
       rel="stylesheet"
     />
     <title>Грандстрой</title>
   </head>
   <body>
+    <div id="success"><p>Сообщение отправленно</p></div>
     <div class="container">
       <header>
         <span class="header-logo">
@@ -53,25 +54,33 @@
           </h2>
           <button class="fast-btn">Быстрый замер</button>
         </div>
-        <form action="/telegram.php">
+        <form id="meas" method="post">
           <h3>Предварительный расчёт стоимости</h3>
-          <input id="POST-name" type="text" name="Имя" placeholder="Имя*" />
+          <input
+            id="POST-name"
+            type="text"
+            name="name"
+            placeholder="Имя*"
+            required
+          />
           <input
             id="POST-phone"
-            type="text"
-            name="Телефон"
+            type="tel"
+            pattern="\+?[0-9\s\-\(\)]+"
+            name="phone"
             placeholder="Телефон*"
+            required
           />
           <input
             id="POST-square"
             type="text"
-            name="Площадь объекта, кв.м."
+            name="square"
             placeholder="Площадь объекта, кв.м."
           />
           <input
             id="POST-object"
             type="text"
-            name="Тип объекта"
+            name="object"
             placeholder="Тип объекта"
           />
           <input class="form-btn" type="submit" value="Узнать стоимость" />
@@ -80,17 +89,128 @@
       <section class="services">
         <h2>Виды услуг</h2>
         <div class="services-content">
-          <div class="services-items"><div><h4>Строительство</h4></div></div>
-          <div class="services-items"><div><h4>Сборка металлоконструкций</h4></div></div>
-          <div class="services-items"><div><h4>Электромонтажные работы</h4></div></div>
-          <div class="services-items"><div><h4>Отделочные работы</h4></div></div>
+          <div class="services-items">
+            <div><h4>Строительство</h4></div>
+          </div>
+          <div class="services-items">
+            <div><h4>Сборка металлоконструкций</h4></div>
+          </div>
+          <div class="services-items">
+            <div><h4>Электромонтажные работы</h4></div>
+          </div>
+          <div class="services-items">
+            <div><h4>Отделочные работы</h4></div>
+          </div>
         </div>
       </section>
       <section class="works"></section>
-      <section class="application"></section>
+      <section class="request">
+        <img src="./img/request-img.png" alt="house" />
+        <div>
+          <form id="req" action="post">
+            <h2>Заявка на быстрый замер</h2>
+            <p>
+              Оставьте заявку на бесплатный замер. После замера вы получите
+              точную стоимость Вашего ремнота
+            </p>
+            <input type="text" placeholder="Имя*" name="name" required />
+            <input type="tel" placeholder="Телефон*" name="phone" required />
+            <input
+              name="data"
+              type="text"
+              placeholder="Дата замера*"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+              required
+            />
+            <input type="text" placeholder="Адреc" name="adress" />
+            <textarea name="comment" placeholder="Комментарий"></textarea>
+            <input class="request-btn" type="submit" value="Быстрый замер" />
+          </form>
+        </div>
+      </section>
       <section class="partners"></section>
       <section class="contacts"></section>
-      <footer></footer>
+      <footer class="footer">
+        <p>© Строительная компания "Гарант строй групп", 2022 гг.</p>
+        <nav>
+          <a href="">Главная</a><a href="">Виды услуг</a><a href="">Работы</a
+          ><a href="">Контакты</a>
+        </nav>
+      </footer>
     </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
+      integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const TOKEN = "5899219382:AAG2nnU-U_eadWorOweyjX3oNqzxy0p0s0c";
+      const CHAT_ID = "270827211";
+      const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      const success = document.getElementById("success");
+
+      document.getElementById("meas").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let message = `<b>Заявка с сайта!</b>\n`;
+        message += `<b>Отрправитель: </b> ${this.name.value}\n`;
+        message += `<b>Телефон: </b> ${this.phone.value}\n`;
+        message += `<b>Площадь объекта, кв.м.: </b> ${this.square.value}\n`;
+        message += `<b>Тип объекта: </b> ${this.object.value}\n`;
+
+        axios
+          .post(URI_API, {
+            chat_id: CHAT_ID,
+            parse_mode: "html",
+            text: message,
+          })
+          .then((res) => {
+            this.name.value = "";
+            this.phone.value = "";
+            success.style.display = "flex";
+            setTimeout(() => (success.style.display = "none"), 2000);
+          })
+          .catch((err) => {
+            console.log("err");
+          })
+          .finally(() => {
+            console.log("fin");
+          });
+      });
+
+      document.getElementById("req").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let message = `<b>Заявка с сайта!</b>\n`;
+        message += `<b>Отрправитель: </b> ${this.name.value}\n`;
+        message += `<b>Телефон: </b> ${this.phone.value}\n`;
+        message += `<b>Дата замера: </b> ${this.data.value}\n`;
+        message += `<b>Адреc: </b> ${this.adress.value}\n`;
+        message += `<b>Комментарий: </b> ${this.comment.value}\n`;
+
+        axios
+          .post(URI_API, {
+            chat_id: CHAT_ID,
+            parse_mode: "html",
+            text: message,
+          })
+          .then((res) => {
+            this.name.value = "";
+            this.phone.value = "";
+            success.style.display = "flex";
+            setTimeout(() => (success.style.display = "none"), 2000);
+          })
+          .catch((err) => {
+            console.log("err");
+          })
+          .finally(() => {
+            console.log("fin");
+          });
+      });
+    </script>
   </body>
 </html>

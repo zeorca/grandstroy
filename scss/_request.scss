@@ -1,0 +1,51 @@
+@use "variables" as v;
+
+.request {
+  display: flex;
+  align-items: center;
+  background-color: v.$yellow;
+  width: 85%;
+  margin: 75px auto;
+
+  img {
+    width: 50%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    max-width: 70%;
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.75em;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      font-size: 0.9em;
+
+      &::placeholder {
+        color: #929598;
+      }
+    }
+
+    .request-btn {
+      background-color: v.$text;
+      color: v.$yellow;
+      width: 45%;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+  }
+}
