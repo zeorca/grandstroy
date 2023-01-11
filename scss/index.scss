@@ -4,11 +4,17 @@
 @use "services";
 @use "request";
 @use "footer";
+@use "hamburger";
 
 * {
   font-family: "Fira Sans Condensed", sans-serif;
   text-decoration: none;
   list-style-type: none;
+}
+
+a[href^="#"] {
+  /* Даем ссылкам, начинающимся с символа #, свойство scroll-behavior со значением smooth */
+  scroll-behavior: smooth;
 }
 
 #success {

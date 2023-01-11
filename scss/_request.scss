@@ -49,3 +49,36 @@
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  .request {
+    padding: 20px 0;
+
+    img {
+      display: none;
+    }
+
+    form {
+      max-width: 90%;
+
+      h2 {
+        font-size: 17px;
+        color: #000;
+      }
+
+      p {
+        font-size: 8px;
+      }
+
+      input,
+      textarea {
+        font-size: 0.7em;
+      }
+
+      .request-btn {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  }
+}

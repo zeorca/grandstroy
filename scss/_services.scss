@@ -5,27 +5,30 @@ h2 {
   color: v.$text;
   font-size: 2.4em;
   font-weight: 500;
+  margin-bottom: 0;
 }
 
 .services-content {
   margin: 0 auto;
   width: 85%;
   .services-items {
+    position: relative;
     width: 100%;
     height: 290px;
-    background: no-repeat  left/85% url('../img/serv-img1.jpg');
+    background: no-repeat left/85%;
     display: flex;
     align-items: center;
-    
+    margin-bottom: 60px;
 
     div {
+      opacity: 0.9;
       width: 430px;
       height: 160px;
       background: v.$yellow;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       display: flex;
       justify-content: left;
-      
+
       h4 {
         color: #101820;
         font-weight: 400;
@@ -43,8 +46,32 @@ h2 {
       background-position: right;
     }
 
-    &:nth-child(2n+1) {
+    &:nth-child(2n + 1) {
       justify-content: right;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 27px;
+  }
+
+  .services-content {
+    .services-items {
+      background-image: url("../img/m-serv-img1.jpg");
+      background-size: contain;
+      background-position: 0px;
+      margin-bottom: 0px;
+
+      div {
+        position: absolute;
+        width: 215px;
+        height: 62px;
+        font-weight: 500;
+        font-size: 10px;
+        bottom: 27px;
+      }
     }
   }
 }

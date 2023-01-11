@@ -1,4 +1,7 @@
+@use 'variables' as v; 
+
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,5 +74,18 @@ header {
         }
       }
     }
+  }
+}
+
+@media (max-width: 575.98px) {
+  header {
+    background-color: v.$bg;
+    .header-logo,
+    nav {
+      display: none;
+    }
+  }
+  .menu-button-container {
+    display: flex;
   }
 }
