@@ -46,6 +46,11 @@
       width: 45%;
       margin: 0 auto;
       font-size: 1.1em;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
     }
   }
 }

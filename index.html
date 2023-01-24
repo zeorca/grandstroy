@@ -1,162 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@275;300;400;500&family=Exo+2:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Грандстрой</title>
-  </head>
-  <body>
-    <div id="success"><p>Сообщение отправленно</p></div>
-    <div class="container">
-      <header>
-        <span class="header-logo">
-          <img src="./img/header-logo.svg" alt="logo" />
-          <h1>Гарант Строй групп</h1>
-        </span>
-        <nav>
-          <ul>
-            <li><a href="">Главная</a></li>
-            <li><a href="">Виды услуг</a></li>
-            <li><a href="">Работы</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class="header-contacts">
-          <div class="header-phone">
-            <h3>+7 902 541-57-06</h3>
-            <p>Свяжитесь с нами</p>
-          </div>
-          <div class="header-social">
-            <a href=""><img src="./img/vk.svg" alt="vk" /></a
-            ><a href=""><img src="./img/tg.svg" alt="tg" /></a
-            ><a href=""><img src="./img/wa.svg" alt="wa" /></a>
-          </div>
-        </div>
-        <label class="menu-button-container">
-          <div class="menu-button"></div>
-        </label>
-        <div class="m-menu hidden">
-          <ul class="container">
-            <li>Главная</li>
-            <li>Виды услуг</li>
-            <li>Работы</li>
-            <li>Контакты</li>
-          </ul>
-        </div>
-      </header>
-      <section class="first-screen">
-        <div>
-          <h1>
-            Строительная компания Гарант Строй Групп <br /><br />
-            Ремонт и отделка в Иркутске и Иркутской области.
-          </h1>
-          <h2>
-            Выполняем все виды ремонтно-отделочных и инженерных работ в
-            квартирах, загородных домах, офисах и других помещениях
-          </h2>
-          <a class="fast-btn" href="#req">Быстрый замер</a>
-        </div>
-        <form id="meas" method="post">
-          <h3>Предварительный расчёт стоимости</h3>
-          <input
-            id="POST-name"
-            type="text"
-            name="name"
-            placeholder="Имя*"
-            required
-          />
-          <input
-            id="POST-phone"
-            type="tel"
-            pattern="\+?[0-9\s\-\(\)]+"
-            name="phone"
-            placeholder="Телефон*"
-            required
-          />
-          <input
-            id="POST-square"
-            type="text"
-            name="square"
-            placeholder="Площадь объекта, кв.м."
-          />
-          <input
-            id="POST-object"
-            type="text"
-            name="object"
-            placeholder="Тип объекта"
-          />
-          <input class="form-btn" type="submit" value="Узнать стоимость" />
-        </form>
-      </section>
-      <section class="services">
-        <h2>Виды услуг</h2>
-        <div class="services-content">
-          <div class="services-items" style="background-image: url('./img/m-serv-img1.jpg')">
-            <div><h4>Строительство</h4></div>
-          </div>
-          <div class="services-items" style="background-image: url('./img/serv-img2.jpg')">
-            <div><h4>Сборка металлоконструкций</h4></div>
-          </div>
-          <div class="services-items" style="background-image: url('./img/serv-img3.jpg')">
-            <div><h4>Электромонтажные работы</h4></div>
-          </div>
-          <div class="services-items" style="background-image: url('./img/serv-img4.jpg')">
-            <div><h4>Отделочные работы</h4></div>
-          </div>
-        </div>
-      </section>
-      <section class="works"></section>
-      <section id="req" class="request">
-        <img src="./img/request-img.png" alt="house" />
-        <div>
-          <form id="req" action="post">
-            <h2>Заявка на быстрый замер</h2>
-            <p>
-              Оставьте заявку на бесплатный замер. После замера вы получите
-              точную стоимость Вашего ремнота
-            </p>
-            <input type="text" placeholder="Имя*" name="name" required />
-            <input type="tel" placeholder="Телефон*" name="phone" required />
-            <input
-              name="data"
-              type="text"
-              placeholder="Дата замера*"
-              onfocus="(this.type='date')"
-              onblur="(this.type='text')"
-              required
-            />
-            <input type="text" placeholder="Адреc" name="adress" />
-            <textarea name="comment" placeholder="Комментарий"></textarea>
-            <input class="request-btn" type="submit" value="Быстрый замер" />
-          </form>
-        </div>
-      </section>
-      <section class="partners"></section>
-      <section class="contacts"></section>
-      <footer class="footer">
-        <p>© Строительная компания "Гарант строй групп", 2022 гг.</p>
-        <nav>
-          <a href="">Главная</a><a href="">Виды услуг</a><a href="">Работы</a
-          ><a href="">Контакты</a>
-        </nav>
-      </footer>
-    </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
-      integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@275;300;400;500&family=Exo+2:wght@500&display=swap"
+    rel="stylesheet" />
+  <title>Грандстрой</title>
+</head>
+
+<body>
+  <div id="success">
+    <p>Сообщение отправленно</p>
+  </div>
+  <div class="container">
+    <header>
+      <span class="header-logo">
+        <img src="./img/header-logo.svg" alt="logo" />
+        <h1>Гарант Строй групп</h1>
+      </span>
+      <nav>
+        <ul>
+          <li><a href="">Главная</a></li>
+          <li><a href="#services">Виды услуг</a></li>
+          <li><a href="">Работы</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-contacts">
+        <div class="header-phone">
+          <h3><a href="tel:+79025415706">+7 902 541-57-06 </a></h3>
+          <p>Свяжитесь с нами</p>
+        </div>
+        <div class="header-social">
+          <a href=""><img src="./img/vk.svg" alt="vk" /></a><a href=""><img src="./img/tg.svg" alt="tg" /></a><a
+            href=""><img src="./img/wa.svg" alt="wa" /></a>
+        </div>
+      </div>
+      <label class="menu-button-container">
+        <div class="menu-button"></div>
+      </label>
+      <div class="m-menu hidden">
+        <ul class="container">
+          <li>Главная</li>
+          <li>Виды услуг</li>
+          <li>Работы</li>
+          <li>Контакты</li>
+        </ul>
+      </div>
+    </header>
+    <section id="first-screen" class="first-screen">
+      <div>
+        <h1>
+          Строительная компания Гарант Строй Групп <br /><br />
+          Ремонт и отделка в Иркутске и Иркутской области.
+        </h1>
+        <h2>
+          Выполняем все виды ремонтно-отделочных и инженерных работ в
+          квартирах, загородных домах, офисах и других помещениях
+        </h2>
+        <a class="fast-btn" href="#req">Быстрый замер</a>
+      </div>
+      <form id="meas" method="post">
+        <h3>Предварительный расчёт стоимости</h3>
+        <input id="POST-name" type="text" name="name" placeholder="Имя*" required />
+        <input id="POST-phone" type="tel" pattern="\+?[0-9\s\-\(\)]+" name="phone" placeholder="Телефон*" required />
+        <input id="POST-square" type="text" name="square" placeholder="Площадь объекта, кв.м." />
+        <input id="POST-object" type="text" name="object" placeholder="Тип объекта" />
+        <input class="form-btn" type="submit" value="Узнать стоимость" />
+      </form>
+    </section>
+    <section id="services" class="services">
+      <h2>Виды услуг</h2>
+      <div class="services-content">
+        <div class="services-items">
+          <div>
+            <h4>Строительство</h4>
+          </div>
+        </div>
+        <div class="services-items">
+          <div>
+            <h4>Сборка металлоконструкций</h4>
+          </div>
+        </div>
+        <div class="services-items">
+          <div>
+            <h4>Электромонтажные работы</h4>
+          </div>
+        </div>
+        <div class="services-items">
+          <div>
+            <h4>Отделочные работы</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="works"></section>
+    <section id="req" class="request">
+      <img src="./img/request-img.png" alt="house" />
+      <div>
+        <form id="req" action="post">
+          <h2>Заявка на быстрый замер</h2>
+          <p>
+            Оставьте заявку на бесплатный замер. После замера вы получите
+            точную стоимость Вашего ремнота
+          </p>
+          <input type="text" placeholder="Имя*" name="name" required />
+          <input type="tel" placeholder="Телефон*" name="phone" required />
+          <input name="data" type="text" placeholder="Дата замера*" onfocus="(this.type='date')"
+            onblur="(this.type='text')" required />
+          <input type="text" placeholder="Адреc" name="adress" />
+          <textarea name="comment" placeholder="Комментарий"></textarea>
+          <input class="request-btn" type="submit" value="Быстрый замер" />
+        </form>
+      </div>
+    </section>
+    <section class="partners">
+      <h2>Партнеры</h2>
+      <div><img src="./img/partners/capitel.png" alt="cap"><img src="./img/partners/fika.png" alt="fika"><img
+          src="./img/partners/lermer.png" alt="merlen"><img src="./img/partners/bronya.png" alt="bronya"></div>
+      <h2>Работаем с компаниями</h2>
+      <div>
+        <img src="./img/partners/banki.png" alt="partner"><img src="./img/partners/metro.png" alt="partner"><img
+          src="./img/partners/tbm.png" alt="partner"><img src="./img/partners/rosn.png" alt="partner"><img
+          src="./img/partners/shina.png" alt="partner"><img src="./img/partners/cash.png" alt="partner"><img
+          src="./img/partners/farm.png" alt="partner"><img src="./img/partners/filtr.png" alt="partner"><img
+          src="./img/partners/court.png" alt="partner"><img src="./img/partners/frf.png" alt="partner"><img
+          src="./img/partners/fns.png" alt="partner"><img src="./img/partners/fss.png" alt="partner"><img
+          src="./img/partners/belshina.png" alt="partner">
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts-left">
+        <h2>Контакты</h2>
+        <p class="contacts-text">Наша компания зарекомендовала себя с положительной стороны и показала высокий уровень
+          квалификаций
+          специалистов. Мы постоянно стремимся к повышению качества своих услуг, реализуемой продукции и повышению базы
+          знаний своих сотрудников, рабочих исполняемых должностей.
+        </p>
+        <span class="contacts-adress">
+          <img src="./img/marker.svg" alt="adress">
+          <p>г.Иркутск. ул. Тухачевского, 3а, офис 402</p>
+        </span>
+        <div class="contacts-mailphone">
+          <span>
+            <img src="./img/mail.svg" alt="mail">
+            <p><a href="mailto:irk@garantstg.ru">irk@garantstg.ru</a></p>
+          </span>
+          <span>
+            <img src="./img/phone.svg" alt="phone">
+            <p><a href="tel:+79025415706">+7 902 541-57-06</a></p>
+          </span>
+          <span class="contacts-social">
+            <a href=""><img src="./img/black-vk.svg" alt="vk"></a><a href=""><img src="./img/black-tg.svg"
+                alt="tg"></a><a href=""><img src="./img/black-wa.svg" alt="wa"></a>
+          </span>
+        </div>
+        <h3 class="contacts-inn-full">ИНН 381208088051; ОГРН 322385000043796</h3>
+      </div>
+      <div class="contacts-right">
+        <div style="display:block;position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/org/garant_stroy_grupp/236319037711/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Гарант Строй групп</a><a
+            href="https://yandex.ru/maps/63/irkutsk/category/building_company/184107633/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Строительная компания в Иркутске</a><iframe
+            src="https://yandex.ru/map-widget/v1/?ll=104.164795%2C52.356989&mode=search&oid=236319037711&ol=biz&z=17"
+            width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+      </div>
+      <h3 class="contacts-inn-mob">ИНН 381208088051; ОГРН 322385000043796</h3>
+    </section>
+    <footer class="footer">
+      <p>© Строительная компания "Гарант строй групп", 2022 гг.</p>
+      <nav>
+        <a href="">Главная</a><a href="">Виды услуг</a><a href="">Работы</a><a href="">Контакты</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"
+    integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>

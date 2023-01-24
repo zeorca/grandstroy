@@ -3,6 +3,8 @@
 @use "first-screen";
 @use "services";
 @use "request";
+@use "partners";
+@use "contacts";
 @use "footer";
 @use "hamburger";
 
@@ -12,9 +14,8 @@
   list-style-type: none;
 }
 
-a[href^="#"] {
-  /* Даем ссылкам, начинающимся с символа #, свойство scroll-behavior со значением smooth */
-  scroll-behavior: smooth;
+a {
+  color: #000;
 }
 
 #success {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .container {
   position: relative;
   margin: auto;
@@ -146,6 +145,9 @@ header .header-contacts .header-social a img {
   border-radius: 3px;
   scroll-behavior: smooth;
 }
+.first-screen div a:hover {
+  opacity: 0.8;
+}
 .first-screen form {
   position: relative;
   display: flex;
@@ -178,6 +180,10 @@ header .header-contacts .header-social a img {
 .first-screen form .form-btn {
   background-color: #fcda05;
   font-size: 1em;
+  cursor: pointer;
+}
+.first-screen form .form-btn:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 575.98px) {
@@ -221,7 +227,7 @@ h2 {
   color: #222831;
   font-size: 2.4em;
   font-weight: 500;
-  margin-bottom: 0;
+  margin: 70px;
 }
 
 .services-content {
@@ -236,6 +242,16 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  background-image: url("../img/serv1.jpg");
+}
+.services-content .services-items:nth-child(2) {
+  background-image: url("../img/serv2.jpg");
+}
+.services-content .services-items:nth-child(3) {
+  background-image: url("../img/serv3.jpg");
+}
+.services-content .services-items:nth-child(4) {
+  background-image: url("../img/serv4.jpg");
 }
 .services-content .services-items div {
   opacity: 0.9;
@@ -267,12 +283,23 @@ h2 {
 @media (max-width: 575.98px) {
   h2 {
     font-size: 27px;
+    margin: 0;
+    margin-top: 30px;
   }
   .services-content .services-items {
     background-image: url("../img/m-serv-img1.jpg");
     background-size: contain;
     background-position: 0px;
     margin-bottom: 0px;
+  }
+  .services-content .services-items:nth-child(2) {
+    background-image: url("../img/serv-img2.jpg");
+  }
+  .services-content .services-items:nth-child(3) {
+    background-image: url("../img/serv-img3.jpg");
+  }
+  .services-content .services-items:nth-child(4) {
+    background-image: url("../img/serv-img4.jpg");
   }
   .services-content .services-items div {
     position: absolute;
@@ -325,6 +352,10 @@ h2 {
   width: 45%;
   margin: 0 auto;
   font-size: 1.1em;
+  cursor: pointer;
+}
+.request form .request-btn:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 575.98px) {
@@ -351,6 +382,150 @@ h2 {
   .request form .request-btn {
     font-size: 14px;
     padding: 8px;
+  }
+}
+.partners {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.partners h2 {
+  color: #222831;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+.partners div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  width: 90%;
+}
+.partners div img {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .partners div {
+    width: 100%;
+  }
+}
+.contacts {
+  display: flex;
+  flex: 1;
+  margin: 70px 130px;
+  flex-wrap: wrap;
+}
+.contacts .contacts-inn-mob {
+  display: none;
+}
+.contacts .contacts-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+.contacts .contacts-left h2 {
+  font-size: 34px;
+  color: #222831;
+  margin: 0;
+}
+.contacts .contacts-left p {
+  font-size: 13px;
+  line-height: 26px;
+  margin-right: 130px;
+}
+.contacts .contacts-left .contacts-adress {
+  display: flex;
+}
+.contacts .contacts-left .contacts-adress p {
+  margin-left: 17px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.contacts .contacts-left .contacts-mailphone {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 35px 0;
+}
+.contacts .contacts-left .contacts-mailphone span {
+  display: flex;
+}
+.contacts .contacts-left .contacts-mailphone span p {
+  padding: 0;
+  margin: 0;
+  margin-left: 17px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.contacts .contacts-left .contacts-mailphone span img {
+  width: 20px;
+  height: 20px;
+}
+.contacts .contacts-left .contacts-mailphone .contacts-social img {
+  margin-right: 8px;
+}
+.contacts .contacts-right {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 500px;
+  position: relative;
+}
+.contacts .contacts-right div {
+  flex: 1;
+}
+
+@media (max-width: 575.98px) {
+  .contacts {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  .contacts .contacts-left {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .contacts .contacts-left h2 {
+    margin-bottom: 20px;
+  }
+  .contacts .contacts-left p {
+    margin: 0;
+  }
+  .contacts .contacts-left .contacts-text {
+    width: 80%;
+    font-weight: 500;
+  }
+  .contacts .contacts-left .contacts-adress {
+    margin-top: 20px;
+  }
+  .contacts .contacts-left .contacts-mailphone {
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+  }
+  .contacts .contacts-left .contacts-mailphone .contacts-social {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .contacts .contacts-right {
+    margin: 0;
+    padding: 0;
+    width: 216px;
+    height: 150px;
+  }
+  .contacts .contacts-inn-full {
+    display: none;
+  }
+  .contacts .contacts-inn-mob {
+    display: block;
+    font-weight: 400;
+    margin: 23px 0;
   }
 }
 .footer {
@@ -467,9 +642,8 @@ h2 {
   list-style-type: none;
 }
 
-a[href^="#"] {
-  /* Даем ссылкам, начинающимся с символа #, свойство scroll-behavior со значением smooth */
-  scroll-behavior: smooth;
+a {
+  color: #000;
 }
 
 #success {

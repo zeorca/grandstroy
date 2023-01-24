@@ -1,0 +1,140 @@
+.contacts {
+    display: flex;
+    flex: 1;
+    margin: 70px 130px;
+    flex-wrap: wrap;
+
+    .contacts-inn-mob {
+        display: none;
+    }
+
+    .contacts-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+
+        h2 {
+            font-size: 34px;
+            color: #222831;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 26px;
+            margin-right: 130px;
+        }
+
+        .contacts-adress {
+            display: flex;
+
+            p {
+                margin-left: 17px;
+                font-weight: 500;
+                font-size: 13px;
+            }
+        }
+
+        .contacts-mailphone {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 35px 0;
+            
+            span {
+                display: flex;
+                
+                p {
+                    padding: 0;
+                    margin: 0;
+                    margin-left: 17px;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+                
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .contacts-social {
+                img {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .contacts-right {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 500px;
+        position: relative;
+
+        div {
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 575.98px){
+    .contacts {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        .contacts-left {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            align-items: center;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            .contacts-text {
+                width: 80%;
+                font-weight: 500;
+            }
+
+            .contacts-adress {
+                margin-top: 20px;
+            }
+
+            .contacts-mailphone {
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 20px;
+                
+                .contacts-social {
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .contacts-right {
+            margin: 0;
+            padding: 0;
+            width: 216px;
+            height: 150px;
+
+        }
+        .contacts-inn-full {
+            display: none;
+        }
+
+        .contacts-inn-mob {
+            display: block;
+            font-weight: 400;
+            margin: 23px 0;
+        }
+    }
+}

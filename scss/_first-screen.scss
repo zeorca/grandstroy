@@ -38,6 +38,10 @@
       border: 0;
       border-radius: 3px;
       scroll-behavior: smooth;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
@@ -77,6 +81,11 @@
     .form-btn {
       background-color: v.$yellow;
       font-size: 1em;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

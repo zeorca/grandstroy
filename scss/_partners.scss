@@ -1,0 +1,33 @@
+.partners {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        color: #222831;
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 60px;
+        width: 90%;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .partners {
+        div {
+            width: 100%;
+        }
+    }
+}
