@@ -66,12 +66,51 @@
       background: v.$bg;
       margin: 0;
       padding: 0;
+      width: 100%;
 
-      li {
-        margin-left: 37px;
-        font-size: 24px;
-        color: v.$text;
-        margin-bottom: 35px;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 37px;
+          font-size: 24px;
+          color: v.$text;
+          margin-bottom: 35px;
+
+          a {
+            &:hover {
+              font-weight: 500;
+              outline: #FCDA05;
+            }
+          }
+        }
+      }
+
+      .m-menu-container-bottom {
+        position: absolute;
+        bottom: 60px;
+        left: 25px;
+        display: flex;
+        flex-direction: column;
+
+        .m-menu-container-logo {
+          width: 59px;
+        }
+
+        span {
+          img {
+            width: 28px;
+            margin-right: 12px;
+            margin-top: 37px;
+          }
+        }
+
+        h3 {
+          font-size: 15px;
+          font-weight: 400;
+        }
       }
     }
 }
@@ -80,4 +119,9 @@
   display: none !important;
 }
 
+@media (max-width: 575.98px) {
+.menu-button-container {
+  display: flex;
+}
 
+}

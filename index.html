@@ -12,7 +12,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@275;300;400;500&family=Exo+2:wght@500&display=swap"
     rel="stylesheet" />
-  <title>Грандстрой</title>
+
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <title>Гарантстрой</title>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
           <li><a href="">Главная</a></li>
           <li><a href="#services">Виды услуг</a></li>
           <li><a href="">Работы</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-contacts">
@@ -43,16 +46,24 @@
             href=""><img src="./img/wa.svg" alt="wa" /></a>
         </div>
       </div>
-      <label class="menu-button-container">
+      <label class="menu-button-container hamburger">
         <div class="menu-button"></div>
       </label>
       <div class="m-menu hidden">
-        <ul class="container">
-          <li>Главная</li>
-          <li>Виды услуг</li>
-          <li>Работы</li>
-          <li>Контакты</li>
-        </ul>
+        <div class="container">
+          <ul>
+            <li><a class="hamburger" href="#">Главная</a></li>
+            <li><a href="#services">Виды услуг</a></li>
+            <li><a href="">Работы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+          <div class="m-menu-container-bottom">
+            <img class="m-menu-container-logo" src="./img/black-logo.png" alt="logo">
+            <span><a href=""><img src="./img/black-vk.svg" alt="vk"></a><a href=""><img src="./img/black-tg.svg"
+                  alt="tg"></a><a href=""><img src="./img/black-wa.svg" alt="wa"></a></span>
+            <h3>ИНН 381208088051; ОГРН 322385000043796</h3>
+          </div>
+        </div>
       </div>
     </header>
     <section id="first-screen" class="first-screen">
@@ -101,7 +112,90 @@
         </div>
       </div>
     </section>
-    <section class="works"></section>
+    <section class="works">
+      <h1>Работы</h1>
+      <div>
+        <div><img src="./img/works/works1.jpg" alt="house">
+          <h2>Дом из бруса</h2>
+          <h3>Стоимость готовой работы<br>без учета материалов</h3>
+          <p>Возведение стен: от 98 447 ₽</p>
+          <p>Крыша и кровля:от 136 753 ₽</p>
+          <p>Монтаж пола и потолка: от 58 678 ₽</p>
+          <p>Дополнительные работы: от 45 029 ₽ </p>
+          <div>
+            <span>постройка</span>
+            <span>
+              <img src="./img/works/works-icon.svg" alt="icon">
+              <p>65.5<br>кв.м.</p>
+            </span>
+            <span>
+              <img src="./img/works/works-clock.svg" alt="clock">
+              <p>14<br>дней</p>
+            </span>
+          </div>
+        </div>
+
+        <div><img src="./img/works/works2.jpg" alt="house">
+          <h2>Дом из газобетона</h2>
+          <h3>Стоимость готовой работы<br>без учета материалов</h3>
+          <p>Возведение стен: от 67 472 ₽</p>
+          <p>Крыша и кровля: от 94 976 ₽</p>
+          <p>Монтаж пола и потолка: от 39 600 ₽</p>
+          <p>Дополнительные работы: от 28 620 ₽</p>
+          <div>
+            <span>постройка</span>
+            <span>
+              <img src="./img/works/works-icon.svg" alt="icon">
+              <p>30<br>кв.м.</p>
+            </span>
+            <span>
+              <img src="./img/works/works-clock.svg" alt="clock">
+              <p>8<br>дней</p>
+            </span>
+          </div>
+        </div>
+
+        <div><img src="./img/works/works3.jpg" alt="house">
+          <h2>Каркасный дом</h2>
+          <h3>Стоимость готовой работы<br>без учета материалов</h3>
+          <p>Монтаж каркаса: от 629 200 ₽</p>
+          <p>Крыша: от 300 857 ₽</p>
+          <p>Монтаж пола и потолка: от 164 160 ₽</p>
+          <p>Дополнительные работы: от 110 029 ₽</p>
+          <div>
+            <span>постройка</span>
+            <span>
+              <img src="./img/works/works-icon.svg" alt="icon">
+              <p>240<br>кв.м.</p>
+            </span>
+            <span>
+              <img src="./img/works/works-clock.svg" alt="clock">
+              <p>24<br>дней</p>
+            </span>
+          </div>
+        </div>
+
+        <div><img src="./img/works/works4.jpg" alt="house">
+          <h2>Фундамент</h2>
+          <h3>Стоимость готовой работы<br>без учета материалов</h3>
+          <p>Подготовительные работы: от 49 700 ₽</p>
+          <p>Разработка траншеи: от 49500 ₽</p>
+          <p>Армирование конструкции: от 90 800 ₽</p>
+          <p>Приемка бетона: от 58 750 ₽</p>
+          <div>
+            <span>постройка</span>
+            <span>
+              <img src="./img/works/works-icon.svg" alt="icon">
+              <p>165<br>кв.м.</p>
+            </span>
+            <span>
+              <img src="./img/works/works-clock.svg" alt="clock">
+              <p>10<br>дней</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="req" class="request">
       <img src="./img/request-img.png" alt="house" />
       <div>
@@ -136,7 +230,7 @@
           src="./img/partners/belshina.png" alt="partner">
       </div>
     </section>
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <div class="contacts-left">
         <h2>Контакты</h2>
         <p class="contacts-text">Наша компания зарекомендовала себя с положительной стороны и показала высокий уровень
@@ -187,6 +281,11 @@
     integrity="sha512-zJYu9ICC+mWF3+dJ4QC34N9RA0OVS1XtPbnf6oXlvGrLGNB8egsEzu/5wgG90I61hOOKvcywoLzwNmPqGAdATA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./script.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+
+  <script src="./owl.carousel.min.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 document
-  .querySelector(".menu-button-container")
+  .querySelector(".hamburger")
   .addEventListener("click", function () {
     document.querySelector(".menu-button-container").classList.toggle("active");
     document.querySelector(".header-contacts").classList.toggle("hidden");
